@@ -180,7 +180,8 @@ df_X_test = imp_median.transform(df_X_test)
 
 # prediction_period_multiplier
 y_pred_test = clf_xgb.predict(df_X_test)
+y_pred_test_proba = clf_xgb.predict_proba(df_X_test)
 
 # construct final results
-df_prediction = pd.DataFrame({'bookingID': df_X.index.values, 'prediction': y_pred_test})
+df_prediction = pd.DataFrame({'bookingID': df_X.index.values, 'prediction': y_pred_test, 'prediction_proba': y_pred_test_proba[:,1]})
 df_prediction.to_csv(file_out, index=False)

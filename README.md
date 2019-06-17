@@ -31,7 +31,7 @@ where,
 * `path_of_prediction.csv`: path of the output prediction result, with default at `'../test/my_prediction.csv'` 
 
 ### Format of Prediction Results
-The final prediction results are stored in a `.csv` file following the example label file with two columns [`bookingID`, `prediction`].
+The final prediction results are stored in a `.csv` file following the example label file with three columns [`bookingID`, `prediction`, `prediction_proba`]. `prediction` is the binary outputs with 0s and 1s, while `prediction_proba` is the predicted probability of being positive (e.g. 1). The calculation of ROC-AUC is based on probability. 
 
 
 ## Description of Methodology
