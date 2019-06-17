@@ -14,7 +14,7 @@ The code is developed and tested in Windows 10 with Python 3.6 under Anaconda (1
   - `sklearn == 0.20.2`
   - `xgboost == 0.82`
 * The folder structure is arranged in the following manner,
-  - `.\srcs\`: contains the source code and jupyter-notebook describing details
+  - `.\srcs\`: contains the source code, environment configuration and jupyter-notebook describing the details
   - `.\model\`: save pickle files required by pre-processing, and the final trained model
   - `.\test\`: sample test input data file and output prediction results
 
@@ -34,12 +34,13 @@ where,
 The final prediction results are stored in a `.csv` file following the example label file with two columns [`bookingID`, `prediction`].
 
 
-## Pre-Processing Steps
+## Description of Methodology
+### Pre-Processing Steps
 The following pre-processing steps are performed on the given dataset,
 * Removal of bookingID with multiple labels
 * Removal of outlier values using IQR method 
 
-## Rationale of Feature Engineering
+### Rationale of Feature Engineering
 In this project, both time-domain and frequency-domain features are extracted by following the metrics utilized by Lu et al. (2018) for vehicle mode and activity type detection using accelerator data of smartphones. The features being extracted includes:
 * static metrics: mean, variance, standard deviation
 * time domain differences: max - min, zero-crossings, cross-correlation, peak to average ratio (PAR), signal magnitude area  (SMA), signal vector magnitude (SVM), and differential signal vector magnitude (DSVM)
