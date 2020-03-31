@@ -5,7 +5,7 @@ astroid==2.2.5
 autograd==1.2
 backcall==0.1.0
 backports.weakref==1.0rc1
-bleach==3.1.1
+bleach==3.1.4
 bokeh==1.0.4
 bottle==0.12.16
 cached-property==1.5.1
