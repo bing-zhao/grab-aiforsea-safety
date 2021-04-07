@@ -7,7 +7,7 @@ backcall==0.1.0
 backports.weakref==1.0rc1
 bleach==3.1.1
 bokeh==1.0.4
-bottle==0.12.16
+bottle==0.12.19
 cached-property==1.5.1
 certifi==2019.3.9
 chardet==3.0.4
